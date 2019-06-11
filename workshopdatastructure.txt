@@ -1,0 +1,421 @@
+In [1]: num = [9,8,2,3,7]
+
+In [2]: num + [7,8,9]
+Out[2]: [9, 8, 2, 3, 7, 7, 8, 9]
+
+In [3]: num.append([4,5,6])
+
+In [4]: num.extend([4,5,6])
+
+In [5]: num
+Out[5]: [9, 8, 2, 3, 7, [4, 5, 6], 4, 5, 6]
+
+In [6]: num.remove(6)
+
+In [7]: num
+Out[7]: [9, 8, 2, 3, 7, [4, 5, 6], 4, 5]
+
+In [8]: num.reverse()
+
+In [9]: num
+Out[9]: [5, 4, [4, 5, 6], 7, 3, 2, 8, 9]
+
+In [10]: num[-1][1]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-10-1deafcb63a4f> in <module>()
+----> 1 num[-1][1]
+
+TypeError: 'int' object is not subscriptable
+
+In [11]: num
+Out[11]: [5, 4, [4, 5, 6], 7, 3, 2, 8, 9]
+
+In [12]: num.count(2)
+Out[12]: 1
+
+In [13]: num.index(2)
+Out[13]: 5
+
+In [14]: num.pop()
+Out[14]: 9
+
+In [15]: num
+Out[15]: [5, 4, [4, 5, 6], 7, 3, 2, 8]
+
+In [16]: del num[1]
+
+In [17]: num
+Out[17]: [5, [4, 5, 6], 7, 3, 2, 8]
+
+In [18]: num.remove(3)
+
+In [19]: num
+Out[19]: [5, [4, 5, 6], 7, 2, 8]
+
+In [20]: num.sort()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-20-696d985cccb7> in <module>()
+----> 1 num.sort()
+
+TypeError: unorderable types: list() < int()
+
+In [21]: a = [5,1,4,10,6,]
+
+In [22]: a.sort()
+
+In [23]: a
+Out[23]: [1, 4, 5, 6, 10]
+
+In [24]: sorted(a,reverse=True)
+Out[24]: [10, 6, 5, 4, 1]
+
+In [25]: a
+Out[25]: [1, 4, 5, 6, 10]
+
+In [26]: sorted(a)
+Out[26]: [1, 4, 5, 6, 10]
+
+In [27]: sore?
+Object `sore` not found.
+
+In [28]: sort?
+Object `sort` not found.
+
+In [29]: num = [ 4,5,9,8,6]
+
+In [30]: 2 in num
+Out[30]: False
+
+In [31]: b = 8
+
+In [32]: b in num
+Out[32]: True
+
+In [33]: b not in num
+Out[33]: False
+
+In [34]: x = 1,2,3
+
+In [35]: x
+Out[35]: (1, 2, 3)
+
+In [36]: t = (1,2,3,4,5,6,7,8)
+
+In [37]: t[0]+t[3]+t[-1]
+Out[37]: 13
+
+In [38]: type(x)
+Out[38]: tuple
+
+In [39]: t[4]=7
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-39-474eeaa012cf> in <module>()
+----> 1 t[4]=7
+
+TypeError: 'tuple' object does not support item assignment
+
+In [40]: a,b=1,2
+
+In [41]: a,b,c=1,2,3
+
+In [42]: a,b=1,2,3
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-42-9427327f85ff> in <module>()
+----> 1 a,b=1,2,3
+
+ValueError: too many values to unpack (expected 2)
+
+In [43]: a,=[1]
+
+In [44]: a
+Out[44]: 1
+
+In [45]: b
+Out[45]: 2
+
+In [46]: c
+Out[46]: 3
+
+In [47]: d
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-47-e29311f6f1bf> in <module>()
+----> 1 d
+
+NameError: name 'd' is not defined
+
+In [48]: x = 1,2,3
+
+In [49]: list(x)
+Out[49]: [1, 2, 3]
+
+In [50]: tuple(list(x))
+Out[50]: (1, 2, 3)
+
+In [51]: tuple('hello')
+Out[51]: ('h', 'e', 'l', 'l', 'o')
+
+In [52]: tuple('h', 'e', 'l', 'l', 'o')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-52-4c9c4b17d625> in <module>()
+----> 1 tuple('h', 'e', 'l', 'l', 'o')
+
+TypeError: tuple() takes at most 1 argument (5 given)
+
+In [53]: llist('h', 'e', 'l', 'l', 'o')
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-53-f991be8e3e09> in <module>()
+----> 1 llist('h', 'e', 'l', 'l', 'o')
+
+NameError: name 'llist' is not defined
+
+In [54]: list('h', 'e', 'l', 'l', 'o')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-54-b876d546601e> in <module>()
+----> 1 list('h', 'e', 'l', 'l', 'o')
+
+TypeError: list() takes at most 1 argument (5 given)
+
+In [55]: primes = [2,34,5,6,7,8,9,5,4,32,2,2,1]
+
+In [56]: primes[2:6]
+Out[56]: [5, 6, 7, 8]
+
+In [57]: primes[:4]
+Out[57]: [2, 34, 5, 6]
+
+In [58]: num = list(range(14))
+
+In [59]: num
+Out[59]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+In [60]: num[1:10:2]
+Out[60]: [1, 3, 5, 7, 9]
+
+In [61]: num[:10]
+Out[61]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [62]: num[10:]
+Out[62]: [10, 11, 12, 13]
+
+In [63]: num[::2]
+Out[63]: [0, 2, 4, 6, 8, 10, 12]
+
+In [64]: num[::-1]
+Out[64]: [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+In [65]: list?
+Init signature: list(self, /, *args, **kwargs)
+Docstring:
+list() -> new empty list
+list(iterable) -> new list initialized from iterable's items
+Type:           type
+
+In [66]: week = ''.split()
+
+In [67]: mtdict = {}
+
+In [68]: d = {1:2:3:4:5}
+  File "<ipython-input-68-1da3c61b2380>", line 1
+    d = {1:2:3:4:5}
+            ^
+SyntaxError: invalid syntax
+
+
+In [69]: d{4}
+  File "<ipython-input-69-9053832383bd>", line 1
+    d{4}
+     ^
+SyntaxError: invalid syntax
+
+
+In [70]: d = {'png':'image'}
+
+In [71]: d['png']
+Out[71]: 'image'
+
+In [72]: 'pn' in d
+Out[72]: False
+
+In [73]: 'image' in d
+Out[73]: False
+
+In [74]: list(d.keys())
+Out[74]: ['png']
+
+In [75]: list(d.values())
+Out[75]: ['image']
+
+In [76]: d['image'] = 'png'
+
+In [77]: d
+Out[77]: {'image': 'png', 'png': 'image'}
+
+In [78]: d.keys()
+Out[78]: dict_keys(['png', 'image'])
+
+In [79]: d.values()
+Out[79]: dict_values(['image', 'png'])
+
+In [80]: d.get()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-80-d2838e9a1f14> in <module>()
+----> 1 d.get()
+
+TypeError: get expected at least 1 arguments, got 0
+
+In [81]: d.get('png')
+Out[81]: 'image'
+
+In [82]: d.update({'d':'c'})
+
+In [83]: d
+Out[83]: {'d': 'c', 'image': 'png', 'png': 'image'}
+
+In [84]: d.clear()
+
+In [85]: d
+Out[85]: {}
+
+In [86]: d = {'s':'d','f':'l'}
+
+In [87]: for v in d:
+    ...:     print(v)
+    ...:
+s
+f
+
+In [88]: for v in d.values()
+  File "<ipython-input-88-d455ccccbab0>", line 1
+    for v in d.values()
+                       ^
+SyntaxError: invalid syntax
+
+
+In [89]: for v in d.values():
+    ...:     print(v)
+    ...:
+d
+l
+
+In [90]: for k,v in d.items():
+    ...:     print(k,v)
+    ...:
+s d
+f l
+
+In [91]: d = dict(s='a',w='f',v='h')
+
+In [92]: d
+Out[92]: {'s': 'a', 'v': 'h', 'w': 'f'}
+
+In [93]: a = {'29','jul','2009'}
+
+In [94]: a
+Out[94]: {'2009', '29', 'jul'}
+
+In [95]: s = [1,2,3,4,5,6,7,8]
+
+In [96]: s
+Out[96]: [1, 2, 3, 4, 5, 6, 7, 8]
+
+In [97]: b = set(a)
+
+In [98]: b
+Out[98]: {'2009', '29', 'jul'}
+
+In [99]: b = set(s)
+
+In [100]: b
+Out[100]: {1, 2, 3, 4, 5, 6, 7, 8}
+
+In [101]: f1 = set([1,2,3,4])
+
+In [102]: f2 = set([5,7,3,4])
+
+In [103]: f1 | f2
+Out[103]: {1, 2, 3, 4, 5, 7}
+
+In [104]: f1 & f2
+Out[104]: {3, 4}
+
+In [105]: f1 - f2
+Out[105]: {1, 2}
+
+In [106]: f1 ^ f2
+Out[106]: {1, 2, 5, 7}
+
+In [107]: b = set([1,2])
+
+In [108]: b < f1
+Out[108]: True
+
+In [109]: f1 <= f1
+Out[109]: True
+
+In [110]: f1 <= f2
+Out[110]: False
+
+In [111]: i in f1
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-111-e502874c8860> in <module>()
+----> 1 i in f1
+
+NameError: name 'i' is not defined
+
+In [112]: 1 in f1
+Out[112]: True
+
+In [113]: 4 in f2
+Out[113]: True
+
+In [114]: a = dict(s='95',d='94',m='95')
+
+In [115]: a
+Out[115]: {'d': '94', 'm': '95', 's': '95'}
+
+In [116]: a&
+  File "<ipython-input-116-7dc436eb80f0>", line 1
+    a&
+      ^
+SyntaxError: invalid syntax
+
+
+In [117]: a.intersection()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-117-de80f760de14> in <module>()
+----> 1 a.intersection()
+
+AttributeError: 'dict' object has no attribute 'intersection'
+
+In [118]: a.intersection(values)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-118-5eb02133166d> in <module>()
+----> 1 a.intersection(values)
+
+AttributeError: 'dict' object has no attribute 'intersection'
+
+In [119]: a.intersection(95)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-119-abf4da5f145c> in <module>()
+----> 1 a.intersection(95)
+
+AttributeError: 'dict' object has no attribute 'intersection'
+
+In [120]: m = list(a.values())
+
+In [121]: u = set(m)
+
+In [122]:

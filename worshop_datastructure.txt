@@ -1,0 +1,216 @@
+
+In [1]: num = [9,8,2,3,7]
+
+In [2]: num + [7,8,9]
+Out[2]: [9, 8, 2, 3, 7, 7, 8, 9]
+
+In [3]: num.append([4,5,6])
+
+In [4]: num.extend([4,5,6])
+
+In [5]: num
+Out[5]: [9, 8, 2, 3, 7, [4, 5, 6], 4, 5, 6]
+
+In [6]: num.remove(6)
+
+In [7]: num
+Out[7]: [9, 8, 2, 3, 7, [4, 5, 6], 4, 5]
+
+In [8]: num.reverse()
+
+In [9]: num
+Out[9]: [5, 4, [4, 5, 6], 7, 3, 2, 8, 9]
+
+In [10]: num[-1][1]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-10-1deafcb63a4f> in <module>()
+----> 1 num[-1][1]
+
+TypeError: 'int' object is not subscriptable
+
+In [11]: num
+Out[11]: [5, 4, [4, 5, 6], 7, 3, 2, 8, 9]
+
+In [12]: num.count(2)
+Out[12]: 1
+
+In [13]: num.index(2)
+Out[13]: 5
+
+In [14]: num.pop()
+Out[14]: 9
+
+In [15]: num
+Out[15]: [5, 4, [4, 5, 6], 7, 3, 2, 8]
+
+In [16]: del num[1]
+
+In [17]: num
+Out[17]: [5, [4, 5, 6], 7, 3, 2, 8]
+
+In [18]: num.remove(3)
+
+In [19]: num
+Out[19]: [5, [4, 5, 6], 7, 2, 8]
+
+In [20]: num.sort()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-20-696d985cccb7> in <module>()
+----> 1 num.sort()
+
+TypeError: unorderable types: list() < int()
+
+In [21]: a = [5,1,4,10,6,]
+
+In [22]: a.sort()
+
+In [23]: a
+Out[23]: [1, 4, 5, 6, 10]
+
+In [24]: sorted(a,reverse=True)
+Out[24]: [10, 6, 5, 4, 1]
+
+In [25]: a
+Out[25]: [1, 4, 5, 6, 10]
+
+In [26]: sorted(a)
+Out[26]: [1, 4, 5, 6, 10]
+
+In [27]: sore?
+Object `sore` not found.
+
+In [28]: sort?
+Object `sort` not found.
+
+In [29]: num = [ 4,5,9,8,6]
+
+In [30]: 2 in num
+Out[30]: False
+
+In [31]: b = 8
+
+In [32]: b in num
+Out[32]: True
+
+In [33]: b not in num
+Out[33]: False
+
+In [34]: x = 1,2,3
+
+In [35]: x
+Out[35]: (1, 2, 3)
+
+In [36]: t = (1,2,3,4,5,6,7,8)
+
+In [37]: t[0]+t[3]+t[-1]
+Out[37]: 13
+
+In [38]: type(x)
+Out[38]: tuple
+
+In [39]: t[4]=7
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-39-474eeaa012cf> in <module>()
+----> 1 t[4]=7
+
+TypeError: 'tuple' object does not support item assignment
+
+In [40]: a,b=1,2
+
+In [41]: a,b,c=1,2,3
+
+In [42]: a,b=1,2,3
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-42-9427327f85ff> in <module>()
+----> 1 a,b=1,2,3
+
+ValueError: too many values to unpack (expected 2)
+
+In [43]: a,=[1]
+
+In [44]: a
+Out[44]: 1
+
+In [45]: b
+Out[45]: 2
+
+In [46]: c
+Out[46]: 3
+
+In [47]: d
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-47-e29311f6f1bf> in <module>()
+----> 1 d
+
+NameError: name 'd' is not defined
+
+In [48]: x = 1,2,3
+
+In [49]: list(x)
+Out[49]: [1, 2, 3]
+
+In [50]: tuple(list(x))
+Out[50]: (1, 2, 3)
+
+In [51]: tuple('hello')
+Out[51]: ('h', 'e', 'l', 'l', 'o')
+
+In [52]: tuple('h', 'e', 'l', 'l', 'o')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-52-4c9c4b17d625> in <module>()
+----> 1 tuple('h', 'e', 'l', 'l', 'o')
+
+TypeError: tuple() takes at most 1 argument (5 given)
+
+In [53]: llist('h', 'e', 'l', 'l', 'o')
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-53-f991be8e3e09> in <module>()
+----> 1 llist('h', 'e', 'l', 'l', 'o')
+
+NameError: name 'llist' is not defined
+
+In [54]: list('h', 'e', 'l', 'l', 'o')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-54-b876d546601e> in <module>()
+----> 1 list('h', 'e', 'l', 'l', 'o')
+
+TypeError: list() takes at most 1 argument (5 given)
+
+In [55]: primes = [2,34,5,6,7,8,9,5,4,32,2,2,1]
+
+In [56]: primes[2:6]
+Out[56]: [5, 6, 7, 8]
+
+In [57]: primes[:4]
+Out[57]: [2, 34, 5, 6]
+
+In [58]: num = list(range(14))
+
+In [59]: num
+Out[59]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+In [60]: num[1:10:2]
+Out[60]: [1, 3, 5, 7, 9]
+
+In [61]: num[:10]
+Out[61]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [62]: num[10:]
+Out[62]: [10, 11, 12, 13]
+
+In [63]: num[::2]
+Out[63]: [0, 2, 4, 6, 8, 10, 12]
+
+In [64]: num[::-1]
+Out[64]: [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+
+
