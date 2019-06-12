@@ -1,0 +1,314 @@
+(User) F:\>ipython --pylab
+Python 3.5.2 |Enthought, Inc. (x86_64)| (default, Mar  2 2017, 16:37:47) [MSC v.1900 64 bit (AMD64)]
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.3.0 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+Using matplotlib backend: Qt4Agg
+
+In [1]: x = linspace(0, 2*pi, 50)
+
+In [2]: plot(x, sin(x))
+Out[2]: [<matplotlib.lines.Line2D at 0x20c1b756dd8>]
+
+In [3]: x[0]
+Out[3]: 0.0
+
+In [4]: x[49]
+Out[4]: 6.2831853071795862
+
+In [5]: xlabel('x')
+Out[5]: <matplotlib.text.Text at 0x20c1b3f8908>
+
+In [6]: ylable('sin(x)')
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-6-005b6d2941bf> in <module>()
+----> 1 ylable('sin(x)')
+
+NameError: name 'ylable' is not defined
+
+In [7]: xlabel('x')
+Out[7]: <matplotlib.text.Text at 0x20c1b3f8908>
+
+In [8]: xlabel(`x`)
+  File "<ipython-input-8-818abe7175a9>", line 1
+    xlabel(`x`)
+           ^
+SyntaxError: invalid syntax
+
+
+In [9]: clf()
+
+In [10]: y = linspace(0,2*pi,50)
+
+In [11]: plot(y,sin(2*y))
+Out[11]: [<matplotlib.lines.Line2D at 0x20c1c47f5c0>]
+
+In [12]: xlabel('y')
+Out[12]: <matplotlib.text.Text at 0x20c1b8f9be0>
+
+In [13]: ylabel('sin(2y)')
+Out[13]: <matplotlib.text.Text at 0x20c1b756b38>
+
+In [14]: %run "c:\users\lenovo\appdata\local\temp\tmpg_rcxa.py"
+ERROR:root:File `'c:\\users\\lenovo\\appdata\\local\\temp\\tmpg_rcxa.py'` not found.
+
+In [15]:
+
+In [15]: title('Sinusoids')
+Out[15]: <matplotlib.text.Text at 0x20c1c469198>
+
+In [16]: legend(['sin(2y)'])
+Out[16]: <matplotlib.legend.Legend at 0x20c1c4ceba8>
+
+In [17]: legend(['sin(2y)'],loc='center')
+Out[17]: <matplotlib.legend.Legend at 0x20c1c4ea390>
+
+In [18]: plot(y,cos(y),'r')
+Out[18]: [<matplotlib.lines.Line2D at 0x20c1c489c18>]
+
+In [19]: clf()
+
+In [20]: plot(y,sin(y),'g',linewidth=2)
+Out[20]: [<matplotlib.lines.Line2D at 0x20c1c531f60>]
+
+In [21]: annotate('local max',xy=(1.5,1))
+Out[21]: <matplotlib.text.Annotation at 0x20c1c467e48>
+
+In [22]: savefig('sin.png')
+
+In [23]: close()
+
+In [24]: y = linspace(0,2*pi,50)
+
+In [25]: clf()
+
+In [26]: plot(y,sin(y))
+Out[26]: [<matplotlib.lines.Line2D at 0x20c1c5c3dd8>]
+
+In [27]: plot(y,cos(y))
+Out[27]: [<matplotlib.lines.Line2D at 0x20c1c5f7780>]
+
+In [28]: xlabel('y')
+Out[28]: <matplotlib.text.Text at 0x20c1c5890f0>
+
+In [29]: ylabel('f(y)')
+Out[29]: <matplotlib.text.Text at 0x20c1c591048>
+
+In [30]: legend(['sin(y)','cos(y)'])
+Out[30]: <matplotlib.legend.Legend at 0x20c1c616f28>
+
+In [31]: clf()
+
+In [32]: figure(1)
+Out[32]: <matplotlib.figure.Figure at 0x20c1c5747b8>
+
+In [33]: plot(y,sin(y))
+Out[33]: [<matplotlib.lines.Line2D at 0x20c1c64f9e8>]
+
+In [34]: figure(2)
+Out[34]: <matplotlib.figure.Figure at 0x20c1c671da0>
+
+In [35]: plot(y,cos(y))
+Out[35]: [<matplotlib.lines.Line2D at 0x20c1c6bca90>]
+
+In [36]: savefig('cosine.png')
+
+In [37]: figure(1)
+Out[37]: <matplotlib.figure.Figure at 0x20c1c5747b8>
+
+In [38]: title('sin(y)')
+Out[38]: <matplotlib.text.Text at 0x20c1c6355c0>
+
+In [39]: savefig('sine.png')
+
+In [40]: close()
+
+In [41]: close()
+
+In [42]: xmin,xmax=xlim()
+
+In [43]: ymin,ymax=ylim()
+
+In [44]: print(xmin,xmax)
+0.0 1.0
+
+In [45]: xlim(xmin,2*pi)
+Out[45]: (0.0, 6.283185307179586)
+
+In [46]: ylim(ymin-0.2,ymax+0.2)
+Out[46]: (-0.20000000000000001, 1.2)
+
+In [47]: plot?
+Signature: plot(*args, **kwargs)
+Docstring:
+Plot lines and/or markers to the
+:class:`~matplotlib.axes.Axes`.  *args* is a variable length
+argument, allowing for multiple *x*, *y* pairs with an
+optional format string.  For example, each of the following is
+legal::
+
+    plot(x, y)        # plot x and y using default line style and color
+    plot(x, y, 'bo')  # plot x and y using blue circle markers
+    plot(y)           # plot y using x as index array 0..N-1
+    plot(y, 'r+')     # ditto, but with red plusses
+
+If *x* and/or *y* is 2-dimensional, then the corresponding columns
+will be plotted.
+
+If used with labeled data, make sure that the color spec is not
+included as an element in data, as otherwise the last case
+``plot("v","r", data={"v":..., "r":...)``
+can be interpreted as the first case which would do ``plot(v, r)``
+using the default line style and color.
+
+If not used with labeled data (i.e., without a data argument),
+an arbitrary number of *x*, *y*, *fmt* groups can be specified, as in::
+
+    a.plot(x1, y1, 'g^', x2, y2, 'g-')
+
+Return value is a list of lines that were added.
+
+
+In [48]:
+
+In [48]: plot??
+Signature: plot(*args, **kwargs)
+Source:
+@_autogen_docstring(Axes.plot)
+def plot(*args, **kwargs):
+    ax = gca()
+    # Deprecated: allow callers to override the hold state
+    # by passing hold=True|False
+    washold = ax._hold
+    hold = kwargs.pop('hold', None)
+    if hold is not None:
+        ax._hold = hold
+        from matplotlib.cbook import mplDeprecation
+        warnings.warn("The 'hold' keyword argument is deprecated since 2.0.",
+                      mplDeprecation)
+    try:
+        ret = ax.plot(*args, **kwargs)
+    finally:
+        ax._hold = washold
+
+    return ret
+File:      c:\users\lenovo\appdata\local\enthought\canopy\edm\envs\user\lib\site-packages\matplotlib\pyplot.py
+Type:      function
+
+In [49]: 0
+Out[49]: 0
+
+In [50]: plot(-x,cos(-x))
+Out[50]: [<matplotlib.lines.Line2D at 0x20c1c9de048>]
+
+In [51]: plot(x,cos(x))
+Out[51]: [<matplotlib.lines.Line2D at 0x20c1c676358>]
+
+In [52]: clf()
+
+In [53]: x = linspace(-5*pi,5*pi)
+
+In [54]: plot(x,sin(x))
+Out[54]: [<matplotlib.lines.Line2D at 0x20c1c9f4d30>]
+
+In [55]: plot(x,xsin(x))
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-55-a7be037fe328> in <module>()
+----> 1 plot(x,xsin(x))
+
+NameError: name 'xsin' is not defined
+
+In [56]: xmin,xmax=xlim()
+
+In [57]: xlim(xmin,5*pi)
+Out[57]: (-17.27875959474386, 15.707963267948966)
+
+In [58]: ylim(ymin-15,ymax+15)
+Out[58]: (-15.0, 16.0)
+
+In [59]: annotate('origin',xy=(0,0))
+Out[59]: <matplotlib.text.Annotation at 0x20c1dd3eac8>
+
+In [60]: x = linspace(15,15)
+
+In [61]: plot(x)
+Out[61]: [<matplotlib.lines.Line2D at 0x20c1dd451d0>]
+
+In [62]: x = linspace(0,15)
+
+In [63]: plot(x)
+Out[63]: [<matplotlib.lines.Line2D at 0x20c1dd59a20>]
+
+In [64]: y = linspace(0,15)
+
+In [65]: x = linspace(0,15)
+
+In [66]: plot(x,y)
+Out[66]: [<matplotlib.lines.Line2D at 0x20c1dd6bf28>]
+
+In [67]: x = linspace(-15,15)
+
+In [68]: y = linspace(-15,15)
+
+In [69]: plot(x,y)
+Out[69]: [<matplotlib.lines.Line2D at 0x20c1dd7ec50>]
+
+In [70]: y = linspace(15,-15)
+
+In [71]: x = linspace(15,-15)
+
+In [72]: plot(x,y)
+Out[72]: [<matplotlib.lines.Line2D at 0x20c1dd98588>]
+
+In [73]: clf()
+
+In [74]: x = linspace(-5*pi,5*pi)
+
+In [75]: clf()
+
+In [76]: xmin,xmax=xlim()
+
+In [77]: xlim(xmin,5*pi)
+Out[77]: (0.0, 15.707963267948966)
+
+In [78]: ylim(ymin-15,ymax+15)
+Out[78]: (-15.0, 16.0)
+
+In [79]: annotate('origin',xy=(0,0))
+Out[79]: <matplotlib.text.Annotation at 0x20c1de23240>
+
+In [80]: y = linspace(0,5*pi)
+
+In [81]: x = linspace(0,5*pi)
+
+In [82]: plot(x,sin(x),'g')
+Out[82]: [<matplotlib.lines.Line2D at 0x20c1de2b898>]
+
+In [83]: plot(x,sin(2*x),'g')
+Out[83]: [<matplotlib.lines.Line2D at 0x20c1de3f780>]
+
+In [84]: clf()
+
+In [85]: xmin,xmax=xlim()
+
+In [86]: xlim(xmin,5*pi)
+Out[86]: (0.0, 15.707963267948966)
+
+In [87]: ylim(ymin-15,ymax+15)
+Out[87]: (-15.0, 16.0)
+
+In [88]: annotate('origin',xy=(0,0))
+Out[88]: <matplotlib.text.Annotation at 0x20c1e28d7b8>
+
+In [89]: x = linspace(0,5*pi)
+
+In [90]: plot(x,sin(2*x),'g')
+Out[90]: [<matplotlib.lines.Line2D at 0x20c1e2a20f0>]
+
+In [91]:

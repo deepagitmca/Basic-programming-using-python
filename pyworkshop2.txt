@@ -1,0 +1,49 @@
+
+
+In [56]: xmin,xmax=xlim()
+
+In [57]: xlim(xmin,5*pi)
+Out[57]: (-17.27875959474386, 15.707963267948966)
+
+In [58]: ylim(ymin-15,ymax+15)
+Out[58]: (-15.0, 16.0)
+
+In [59]: annotate('origin',xy=(0,0))
+Out[59]: <matplotlib.text.Annotation at 0x20c1dd3eac8>
+
+In [60]: x = linspace(15,15)
+
+In [61]: plot(x)
+Out[61]: [<matplotlib.lines.Line2D at 0x20c1dd451d0>]
+
+In [62]: x = linspace(0,15)
+
+In [63]: plot(x)
+Out[63]: [<matplotlib.lines.Line2D at 0x20c1dd59a20>]
+
+In [64]: y = linspace(0,15)
+
+In [65]: x = linspace(0,15)
+
+In [66]: plot(x,y)
+Out[66]: [<matplotlib.lines.Line2D at 0x20c1dd6bf28>]
+
+In [67]: x = linspace(-15,15)
+
+In [68]: y = linspace(-15,15)
+
+In [69]: plot(x,y)
+Out[69]: [<matplotlib.lines.Line2D at 0x20c1dd7ec50>]
+
+In [70]: y = linspace(15,-15)
+
+In [71]: x = linspace(15,-15)
+
+In [72]: plot(x,y)
+Out[72]: [<matplotlib.lines.Line2D at 0x20c1dd98588>]
+
+In [73]: clf()
+
+In [74]: x = linspace(-5*pi,5*pi)
+
+In [75]: xlim(xmin,5*pi)

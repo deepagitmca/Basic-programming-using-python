@@ -1,0 +1,145 @@
+
+In [1]: x = linspace(0, 2*pi, 50)
+
+In [2]: plot(x, sin(x))
+Out[2]: [<matplotlib.lines.Line2D at 0x20c1b756dd8>]
+
+In [3]: x[0]
+Out[3]: 0.0
+
+In [4]: x[49]
+Out[4]: 6.2831853071795862
+
+In [5]: xlabel('x')
+Out[5]: <matplotlib.text.Text at 0x20c1b3f8908>
+
+In [6]: ylable('sin(x)')
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-6-005b6d2941bf> in <module>()
+----> 1 ylable('sin(x)')
+
+NameError: name 'ylable' is not defined
+
+In [7]: xlabel('x')
+Out[7]: <matplotlib.text.Text at 0x20c1b3f8908>
+
+In [8]: xlabel(`x`)
+  File "<ipython-input-8-818abe7175a9>", line 1
+    xlabel(`x`)
+           ^
+SyntaxError: invalid syntax
+
+
+In [9]: clf()
+
+In [10]: y = linspace(0,2*pi,50)
+
+In [11]: plot(y,sin(2*y))
+Out[11]: [<matplotlib.lines.Line2D at 0x20c1c47f5c0>]
+
+In [12]: xlabel('y')
+Out[12]: <matplotlib.text.Text at 0x20c1b8f9be0>
+
+In [13]: ylabel('sin(2y)')
+Out[13]: <matplotlib.text.Text at 0x20c1b756b38>
+
+In [14]: %run "c:\users\lenovo\appdata\local\temp\tmpg_rcxa.py"
+ERROR:root:File `'c:\\users\\lenovo\\appdata\\local\\temp\\tmpg_rcxa.py'` not found.
+
+In [15]:
+
+In [15]: title('Sinusoids')
+Out[15]: <matplotlib.text.Text at 0x20c1c469198>
+
+In [16]: legend(['sin(2y)'])
+Out[16]: <matplotlib.legend.Legend at 0x20c1c4ceba8>
+
+In [17]: legend(['sin(2y)'],loc='center')
+Out[17]: <matplotlib.legend.Legend at 0x20c1c4ea390>
+
+In [18]: plot(y,cos(y),'r')
+Out[18]: [<matplotlib.lines.Line2D at 0x20c1c489c18>]
+
+In [19]: clf()
+
+In [20]: plot(y,sin(y),'g',linewidth=2)
+Out[20]: [<matplotlib.lines.Line2D at 0x20c1c531f60>]
+
+In [21]: annotate('local max',xy=(1.5,1))
+Out[21]: <matplotlib.text.Annotation at 0x20c1c467e48>
+
+In [22]: savefig('sin.png')
+
+In [23]: close()
+
+In [24]: y = linspace(0,2*pi,50)
+
+In [25]: clf()
+
+In [26]: plot(y,sin(y))
+Out[26]: [<matplotlib.lines.Line2D at 0x20c1c5c3dd8>]
+
+In [27]: plot(y,cos(y))
+Out[27]: [<matplotlib.lines.Line2D at 0x20c1c5f7780>]
+
+In [28]: xlabel('y')
+Out[28]: <matplotlib.text.Text at 0x20c1c5890f0>
+
+In [29]: ylabel('f(y)')
+Out[29]: <matplotlib.text.Text at 0x20c1c591048>
+
+In [30]: legend(['sin(y)','cos(y)'])
+Out[30]: <matplotlib.legend.Legend at 0x20c1c616f28>
+
+In [31]: clf()
+
+In [32]: figure(1)
+Out[32]: <matplotlib.figure.Figure at 0x20c1c5747b8>
+
+In [33]: plot(y,sin(y))
+Out[33]: [<matplotlib.lines.Line2D at 0x20c1c64f9e8>]
+
+In [34]: figure(2)
+Out[34]: <matplotlib.figure.Figure at 0x20c1c671da0>
+
+In [35]: plot(y,cos(y))
+Out[35]: [<matplotlib.lines.Line2D at 0x20c1c6bca90>]
+
+In [36]: savefig('cosine.png')
+
+In [37]: figure(1)
+Out[37]: <matplotlib.figure.Figure at 0x20c1c5747b8>
+
+In [38]: title('sin(y)')
+Out[38]: <matplotlib.text.Text at 0x20c1c6355c0>
+
+In [39]: savefig('sine.png')
+
+In [40]: close()
+
+In [41]: close()
+
+In [42]: xmin,xmax=xlim()
+
+In [43]: ymin,ymax=ylim()
+
+In [44]: print(xmin,xmax)
+0.0 1.0
+
+In [45]: xlim(xmin,2*pi)
+Out[45]: (0.0, 6.283185307179586)
+
+In [46]: ylim(ymin-0.2,ymax+0.2)
+Out[46]: (-0.20000000000000001, 1.2)
+
+
+In [49]: 0
+Out[49]: 0
+
+In [50]:
+
+
+
+
+
